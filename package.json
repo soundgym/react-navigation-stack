@@ -1,6 +1,6 @@
 {
   "name": "react-navigation-stack",
-  "version": "1.10.3",
+  "version": "1.10.4",
   "description": "Stack navigator component for React Navigation",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -18,7 +18,8 @@
     "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn"
+    "bootstrap": "yarn example && yarn",
+    "deploy": "npx bump && git add . && git commit -m \"modify data\" && git push"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
