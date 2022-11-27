@@ -16,7 +16,6 @@ import {
   NavigationActions,
   NavigationProvider,
   ThemeContext,
-  withOrientation,
 } from 'react-navigation';
 import { ScreenContainer } from 'react-native-screens';
 import {
@@ -150,7 +149,7 @@ class StackViewLayout extends React.Component<Props, State> {
    */
   private immediateIndex: number | null = null;
   private transitionConfig:
-    | HeaderTransitionConfig & TransitionConfig
+    | (HeaderTransitionConfig & TransitionConfig)
     | undefined;
   private prevProps: Props | undefined;
 
@@ -1010,4 +1009,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withOrientation(StackViewLayout);
+export default StackViewLayout;
